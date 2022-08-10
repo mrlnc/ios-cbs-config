@@ -56,20 +56,27 @@
 
   <p class="lead text-justify">
   Cell Broadcast configuration as found in iOS. iOS has "Carrier Bundles" and "Country Bundles" with network-specific or country-specific configuration. The list may not be complete or correct
-  - it's auto-generated from the <code>carrier.plist</code> files I found in OTA updates and on <code>itunes.com/version</code>, but carriers may have other channels to distribute their configs.
+  - it's auto-generated from the <code>carrier.plist</code> files I found in OTA updates and on <code>itunes.com/version</code>. Carriers may have other channels to distribute their configs.
+  Configs could also be incomplete: networks could potentially send messages on multiple IDs in parallel (say, 919 and 4370) but only configure a single channel for iOS.
   <br />
   <br />
-  The config here is also incomplete: networks could potentially send messages on multiple IDs in parallel (say, 919 and 4370) but only configure a single channel for iOS.
+  Jump to:
+  <ul>
+  <li><a href="#exampleCbs">Cell Broadcast Example</a></li>
+  <li><a href="#exampleConfig">iOS Config Example</a></li>
+  <li><a href="#table">Table</a></li>
+  </ul>
   <br />
   <br />
-  Cell Broadcast Example:  <br />
+
+  <h2 id="exampleCbs">Cell Broadcast Example</h2>
   <video controls width=100%>
   <source src="cb.mp4" type="video/mp4">
   Your browser does not support the video tag.
   </video>
   <br />
   <br />
-  Example configuration:
+  <h2 id="exampleConfig">Example configuration</h2>
   <br />
   </p>
   <pre><code>
@@ -103,6 +110,7 @@
   <p class="lead text-justify">
 
   <br />
+  <h2 id="table">Table</h2>
   The "23.041 Category" is based on Table 9.4.1.2.2 from TS23.041 and just looks up which ID range the message should belong to. That's just an approximation, as some ranges allow multiple applications.
   <br /></p>
 
